@@ -10,7 +10,7 @@ import UIKit
 
 public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
     var cardType = YRCreditCardType.masterCard
-    var flipOnClick = true
+    public var flipOnClick = true
 
     fileprivate let faceView = UIView()
     fileprivate let backView = UIView()
@@ -413,6 +413,18 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
     }
 
     // MARK: - Animation
+    
+    public func flipToFront() {
+        if faceView.isHidden {
+            self.flip()
+        }
+    }
+    
+    public func flipToBack() {
+        if !faceView.isHidden {
+            self.flip()
+        }
+    }
 
     public func flip() {
         if !faceView.isHidden {
