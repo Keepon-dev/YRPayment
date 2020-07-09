@@ -58,7 +58,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
 
     // MARK: - Card Strings
 
-    var cardNumber: String! {
+    public var cardNumber: String! {
         didSet {
             unselectAll()
             cardNumberLabel.select()
@@ -83,7 +83,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         }
     }
 
-    var cardHolderName: String! {
+    public var cardHolderName: String! {
         didSet {
             unselectAll()
             cardHolderNameLabel.select()
@@ -105,7 +105,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         }
     }
 
-    var cardValidity: String! {
+    public var cardValidity: String! {
         didSet {
             unselectAll()
             cardValidityLabel.select()
@@ -131,7 +131,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         }
     }
 
-    var cardCryptogram: String! {
+    public var cardCryptogram: String! {
         didSet {
             unselectAll()
             cardValidityLabel.select()
