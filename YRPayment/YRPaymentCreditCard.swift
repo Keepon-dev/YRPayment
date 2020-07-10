@@ -170,8 +170,8 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         case let .custom(img):
             let a = CALayer()
             a.contents = img.cgImage
-            a.frame = CGRect(x: 0, y: 0, width: 36, height: 40)
-            a.contentsGravity = .topRight
+            a.frame = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
+            a.contentsGravity = .resizeAspect
             return a
         }
     }
@@ -304,7 +304,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
     fileprivate func setupFaceView() {
         faceView.layoutIfNeeded()
         let cardSymbole = cardSymbleLayer()
-        cardSymbole.frame = CGRect(x: faceView.bounds.width - 30 - 16, y: 20, width: cardSymbole.bounds.width, height: cardSymbole.bounds.height)
+        cardSymbole.frame = CGRect(x: faceView.bounds.width - cardSymbole.bounds.width - 16, y: 20, width: cardSymbole.bounds.width, height: cardSymbole.bounds.height)
         faceView.layer.addSublayer(cardSymbole)
 
         faceView.addSubview(cardNumberLabel)
@@ -360,7 +360,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         backView.layer.addSublayer(blacMagneticBar)
 
         let cardSymbole = cardSymbleLayer()
-        cardSymbole.frame = CGRect(x: backView.bounds.width - 30 - 16, y: backView.frame.height - 40, width: cardSymbole.bounds.width, height: cardSymbole.bounds.height)
+        cardSymbole.frame = CGRect(x: backView.bounds.width - cardSymbole.bounds.width - 16, y: backView.frame.height - cardSymbole.bounds.height - 10, width: cardSymbole.bounds.width, height: cardSymbole.bounds.height)
         backView.layer.addSublayer(cardSymbole)
 
         backView.addSubview(cardCryptogramLabel)
