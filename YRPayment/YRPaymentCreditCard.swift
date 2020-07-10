@@ -49,7 +49,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         return (s1, String(num).replacingOccurrences(of: s1, with: ""))
     }
 
-    func unselectAll() {
+    public func unselectAll() {
         cardNumberLabel.unSelect()
         cardHolderNameLabel.unSelect()
         cardValidityLabel.unSelect()
