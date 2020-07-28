@@ -214,6 +214,8 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         return lab
     }()
 
+    public var cardHolderNameTitleLabel: UILabel?
+    
     let cardHolderNameLabel: UILabel = {
         _ = YRPaymentCreditCard.registerFonts
         let lab = UILabel()
@@ -335,6 +337,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
         cardHolderNameStaticLabel.heightAnchor.constraint(equalToConstant: 12).isActive = true
         cardHolderNameStaticLabel.bottomAnchor.constraint(equalTo: cardHolderNameLabel.topAnchor, constant: -4).isActive = true
         cardHolderNameStaticLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
+        self.cardHolderNameTitleLabel = cardHolderNameStaticLabel
 
         let cardValidityStaticLabel = UILabel()
         cardValidityStaticLabel.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 10)
