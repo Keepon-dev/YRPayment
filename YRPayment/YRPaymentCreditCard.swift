@@ -206,7 +206,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ])
         let xes = NSMutableAttributedString(string: "XXXX XXXX XXXX XXXX", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
         ])
         nums.append(xes)
         lab.attributedText = nums
@@ -225,7 +225,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ])
         let placeholder = NSMutableAttributedString(string: "NAME SURNAME", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
         ])
         name.append(placeholder)
         lab.attributedText = name
@@ -242,7 +242,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ])
         let placeholder = NSMutableAttributedString(string: "MM/YY", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
         ])
         nums.append(placeholder)
         lab.attributedText = nums
@@ -259,7 +259,7 @@ public final class YRPaymentCreditCard: UIView, CAAnimationDelegate {
             NSAttributedString.Key.foregroundColor: UIColor.white,
         ])
         let xes = NSMutableAttributedString(string: "XXX", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5),
         ])
         nums.append(xes)
         lab.attributedText = nums
